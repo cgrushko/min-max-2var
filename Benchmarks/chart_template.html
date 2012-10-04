@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script type="text/javascript">
+$(function () {
+    var chart;
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'bar'
+            },
+            title: {
+                text: 'Time to solve 10,000 problems'
+            },
+            xAxis: {
+                categories: ###TEST_NAMES###,
+                // ['Random 1000', 'Random 2000', 'Random 4000', 'Random 8000', 'GMDS 1110', 'GMDS 2224', 'GMDS 4450', 'GMDS 8902'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Time (seconds)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            // tooltip: {
+            //     formatter: function() {
+            //         return ''+
+            //             this.series.name +': '+ this.y +' millions';
+            //     }
+            // },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -100,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: ###DATA###
+
+// [{'data': [0.68, 1.32, 2.28, 5.44, 1.47, 2.8, 5.44, 10.84], 'name': 'hough'}, {'data': [170.09, 342.14, 719.53, 1379.61, 68.46, 137.46, 272.65, 540.3], 'name': 'CGAL'}, {'data': [7.31, 14.8, 29.87, 60.52, 5.98, 12.31, 25.19, 52.17], 'name': 'GLPK (Simplex, dual)'}, {'data': [24.55, 53.79, 118.5, 247.73, 17.24, 33.88, 72.88, 150.82], 'name': 'MOSEK (Simplex, Primal)'}, {'data': [41.84, 82.49, 168.27, 332.05, 14.96, 26.85, 50.81, 99.03], 'name': 'MOSEK (IPM)'}, {'data': [368.29, 1453.85, 6046.57, 26117.73, 308.39, 1216.46, 4995.46, 21844.81], 'name': 'GLPK (Simplex, primal)'}, {'data': [13.11, 25.97, 52.03, 102.44, 10.38, 20.56, 41.02, 81.93], 'name': 'lpsolve55 (etaPFI)'}, {'data': [39.01, 94.75, 246.26, 677.97, 29.97, 71.52, 174.93, 473.5], 'name': 'GLPK (Simplex, dual, presolve)'}, {'data': [57.83, 150.3, 448.12, 1461.52, 42.22, 104.19, 288.24, 896.66], 'name': 'lpsolve55'}, {'data': [519.07, 1974.09, 8354.64, 38537.54, 374.24, 1366.35, 5204.64, 22614.5], 'name': 'GLPK (Simplex, primal, presolve)'}, {'data': [2.35, 0, 0, 0, 2.22, 4.28, 8.62, 17.8], 'name': 'Seidel'}, {'data': [28.03, 54.28, 121.05, 239.14, 20.1, 38.84, 78.92, 157.48], 'name': 'MOSEK (Simplex, Dual)'}]
+
+        });
+    });
+    
+});
+</script>
+
+</head>
+
+<body>
+	<div id="container" style="min-width: 400px; height: 800px; margin: 0 auto"></div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+# After each test name, a list of problem numbers to skip follows. 
+# A test name must be a whole word (by C definitions)
+# Note that Seidel is randomized; the problems it fails to solve depend
+# on rand(), which changes depending on seed and number of rand() calls prior.
+# Note: comments must begin with a # sign, followed by a space
+GMDS-2224 6727 
+GMDS-4450 2696 3490
+GMDS-8902 3247 4642 5336 5338 5567 6093 6261 6956 7081 9955 

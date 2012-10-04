@@ -1,0 +1,10 @@
+Random constraints: 4000
+
+Hough total time (ms): 1422.068000
+lpsolve55 total time (ms): 123467.811000
+lpsolve55 (etaPFI) total time (ms): 14905.516000
+CGAL total time (ms): 243212.548000
+GLPK (Simplex, primal) total time (ms): 5020291.204000
+GLPK (Simplex, dual) total time (ms): 23876.251000
+GLPK (Simplex, primal, presolve) total time (ms): 5203080.514000
+GLPK (Simplex, dual, presolve) total time (ms): 170685.703000

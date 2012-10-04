@@ -1,0 +1,1 @@
+cat $1 | grep -v "Problem number: " | grep -v "set_BFP: Successfully" | grep -v '^$' | grep "Hough total time" -A1 -B1 | grep -v "\--"

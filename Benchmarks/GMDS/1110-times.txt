@@ -1,0 +1,15 @@
+10,000 problems from GMDS/8902.dat
+d = struct('input', '/media/c/temp/kvf/models', 'output', '/media/c/temp/kvf/results');
+save_data_for_TestSuite(directories, 'horn_t1.mat', factor, 3, 0.1, 50, 25)
+factor = 1/8
+
+Then run TestSuite with SAVE_LPS_TO_FILE set in settings.h
+
+Hough total time (ms): 190.814000
+lpsolve55 total time (ms): 23397.887000
+lpsolve55 (etaPFI) total time (ms): 4944.060000
+CGAL total time (ms): 155016.622000
+GLPK (Simplex, primal) total time (ms): 368779.238000
+GLPK (Simplex, dual) total time (ms): 7383.300000
+GLPK (Simplex, primal, presolve) total time (ms): 517389.769000
+GLPK (Simplex, dual, presolve) total time (ms): 38728.931000
